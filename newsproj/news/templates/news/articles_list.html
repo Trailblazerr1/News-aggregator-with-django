@@ -1,0 +1,22 @@
+{% extends 'news/base.html' %}
+{% block content%}
+
+<div class="jumbotron">
+      <div class="container">
+        <h1>Django News!</h1>
+        <p>Hey here are the news from my feeds.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <ul>
+          {% for article in articles%}
+            <li><a href="{{ article.url}}">{{article.title}}</a></li>
+            {% endfor%}
+      </ul>
+
+      <footer>
+        <p>&copy; 2016 Django News</p>
+      </footer>
+    </div> <!-- /container -->
+{% endblock%}
